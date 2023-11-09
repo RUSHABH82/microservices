@@ -1,0 +1,26 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: customer
+  datasource:
+    url: jdbc:mysql://localhost:3306/customer?createDatabaseIfNotExist=true&autoReconnect=true
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+  rabbitmq:
+    addresses: rabbitmq:5672
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+    enabled: false
