@@ -31,3 +31,8 @@ rabbitmq:
     notification: notification.queue
   routing-keys:
     internal-notification: internal.notification.routing-key
+
+management:
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411

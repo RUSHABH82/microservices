@@ -21,3 +21,7 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     enabled: false
+management:
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411
