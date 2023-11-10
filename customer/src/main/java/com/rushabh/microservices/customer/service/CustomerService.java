@@ -26,8 +26,8 @@ public class CustomerService implements ICustomerService {
     private final FraudClient fraudClient;
     private final RabbitMQMessageProducer rabbitMQMessageProducer;
 
-    private Base64.Encoder ENCODER = Base64.getEncoder();
-    private Base64.Decoder DECODER = Base64.getDecoder();
+    private final Base64.Encoder ENCODER = Base64.getEncoder();
+    private final Base64.Decoder DECODER = Base64.getDecoder();
 
     public CustomerService(CustomerRepository customerRepository,
                            FraudClient fraudClient,

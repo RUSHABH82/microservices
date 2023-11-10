@@ -1,6 +1,7 @@
 server:
   port: 8083
 spring:
+
   application:
     name: api-gateway
   cloud:
@@ -10,7 +11,7 @@ spring:
           uri: lb://CUSTOMER
           predicates:
             - Path=/api/v1/customers/**
-management:
+
   zipkin:
     tracing:
       endpoint: http://localhost:9411
